@@ -42,6 +42,20 @@ public class GameMasterObject : MonoBehaviour {
         player.SetActive(true);
     }
 
+    public void LoadBattleField(string battleField)
+    {
+        Application.LoadLevelAdditive(battleField);
+        foreach (GameObject x in SceneManager.GetSceneByName("main").GetRootGameObjects()) x.SetActive(false);
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName(battleField));
+    }
+
+    public void LoadMapFromBattleField(string map)
+    {
+        Application.UnloadLevel("BattleField");
+        foreach (GameObject x in SceneManager.GetSceneByName(map).GetRootGameObjects()) x.SetActive(true);
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName(map));
+    }
+
     public GameObject GetPlayer()
     {
         return player;

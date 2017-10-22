@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CreatureCollection>
+  <Creatures>
+    <Creature name="Knight" HealthPerUnit="20" Attack="4" Deffense="3" MoveSpeed="5" Range="1" Cost="150"> </Creature>
+    <Creature name="Archer" HealthPerUnit="15" Attack="5" Deffense="1" MoveSpeed="7" Range="10" Cost="200"> </Creature>
+  </Creatures>
+</CreatureCollection>

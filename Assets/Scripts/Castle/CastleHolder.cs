@@ -12,7 +12,10 @@ public class CastleHolder : MonoBehaviour {
 
     public void Add()
     {
-        gm.Castle.GetComponent<CastleBuildings>().GetTest();
+        foreach (Creature x in gm.GetPlayer().GetComponent<PlayerArmy>().army)
+        {
+            Debug.Log(x.name + " > count: " + x.count);
+        }
     }
 	
 	// Update is called once per frame
